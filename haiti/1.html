@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+      .mySlides {display:none;}
+      h2 {
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+        font-size: 40px;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <h2 class="w3-center">Haiti's Carribean Views</h2>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="media/haitislide1.jpg" style="width:100%">
+  <img class="mySlides" src="media/haitislide2.jpg" style="width:100%">
+  <img class="mySlides" src="media/haitislide3.jpg" style="width:100%">
+  <img class="mySlides" src="media/haitislide4.jpg" style="width:100%">
+  <img class="mySlides" src="media/haitislide5.jpg" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+    <br><br><hr><br><br>
+    <p1 style="font-size:20px;"><a href="https://w1126l.github.io/project04/cover.html">Back to Vacation Spots</a></p1>
+    <p1 style="font-size:20px;">&emsp;||&emsp;</p1>
+    <p1 style="font-size:20px;"><a href="https://w1126l.github.io/project04/cover.html">Back to Haiti Guide</a></p1>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+
+  </body>
+</html>
